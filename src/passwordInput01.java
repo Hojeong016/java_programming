@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class passwordInput01 {
     public static void main(String[] args) {
+
         //비밀번호 설정
         String passWord = "abc123";
         Scanner scanner = new Scanner(System.in);

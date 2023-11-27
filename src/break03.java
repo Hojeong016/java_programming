@@ -8,6 +8,7 @@ public class break03 {
         System.out.println("비밀번호를 입력하세요.");
 
         while (true){
+
            // 입력창이 whil문 밖에 위치하면 무한반복이 됨. 왜 그런걸까?
             String input = scanner.nextLine();
             if(passWord.equals(input)){

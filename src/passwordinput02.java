@@ -2,6 +2,7 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class passwordinput02 {
+
     public static void main(String[] args) {
         String password = "abc123";
         Scanner scanner = new Scanner(System.in);
