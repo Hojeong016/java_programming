@@ -9,7 +9,8 @@ public class array03 {
         for (int i = 0; i < days.length; i = i+1){
             System.out.println(days[i]+"요일");
 
-        } //인덱스로 특정 위치의 요소를 선언 ,,, days의 배열중 i에 해당하는 것
+        }
+        //인덱스로 특정 위치의 요소를 선언 ,,, days의 배열중 i에 해당하는 것
         //i의 초기값은 = 0 따라서 월요일 , 1씩 증가 반복하고 배열의 길이보다 적을때 멈춘다. 즉 7보다 적을때
         //day[6]은 일요일
 
