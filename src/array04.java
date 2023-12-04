@@ -10,7 +10,8 @@ public class array04 {
         String[] days2 = Arrays.copyOf(days,9);
         days2[8]="월";
         days2[7]="일";
-//복사 후 크기 추가
+
+        //복사 후 크기 추가
         for(String day : days2){
             System.out.println(day+"요일");
         }

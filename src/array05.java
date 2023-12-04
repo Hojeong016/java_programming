@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class array05 {
+
     public static void main(String[] args) {
         //2차원 배열
         String[][] days = {
