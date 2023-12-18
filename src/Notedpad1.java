@@ -56,7 +56,6 @@ public class Notedpad1 {
             else if (number == 2) {
 
                 //사용자 파일명 지정
-                \
                 System.out.println("파일명을 입력하세요.");
                 String fileName = scanner.nextLine();
 

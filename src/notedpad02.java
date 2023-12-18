@@ -38,10 +38,14 @@ public class notedpad02 {
                 System.out.println("파일명을 입력하세요");
                 String input = scanner.nextLine();
 
+                madeFile(input);
+
             }
             else if (number == 3) {
                 System.out.println("메모장을 종료합니다.");
                 break;
+            } else {
+                System.out.println("다시 입력하세요.");
             }
         }
     }
@@ -65,31 +69,49 @@ public class notedpad02 {
         }
 
         scanner1.close();
-       return  //어떤 위치에서 리턴을 해주어야 할까?
+      // return//어떤 위치에서 리턴을 해주어야 할까?
         // 리턴의 역할 : 1. 반환값 2. 함수 탈출(반환값의 타입이 void 로 지정되었을 때)
         //계속 해맨 이유,, 나는 파일 이름을  String 값을 지정해 주어야 한다고 생각헀다.
         // 반복문을 탈출 ,,,?? void 로 지정해주어야 한다.. 왜?? 이런 경우엔 왜 void로 지정해 주어야할까??
     }
 
-public static void madeFile(String inputFile){
-    FileWriter writer = null;
+    public static void madeFile(String inputFile){
+        FileWriter writer = null;
 
-    try{
-        writer = new FileWriter(inputFile);
-    }catch (IOException e){
-        System.out.println("파일 생성에 실패하였습니다.");
-        return;
-    }
-
-    while (true){
-        String input = scanner.nextLine();
-      //  writer.write(input);
-
-        if(writer.equals("")){
-            System.out.println("작성을 종료합니다.");
-            break;
+        try{
+            writer = new FileWriter(inputFile);
+        }catch (IOException e){
+            System.out.println("파일 생성에 실패하였습니다.");
+            return;
         }
-    }
+
+        System.out.println("내용을 입력하세요.");
+        while (true){
+            String input = scanner.nextLine();
+
+            if(input.equals("")){
+                System.out.println("작성을 종료합니다.");
+                break;
+            }
+
+            try {
+            writer.write(input + "\n");
+            }catch (IOException e){
+                System.out.println("문자열 저장에 실패하였습니다.");
+            }
+
+            try {
+                writer.close();
+            }catch (IOException e){
+                System.out.println("저장에 실패하였습니다.");
+            }
+
+            try {
+                Thread. sleep(2000);
+            }catch (InterruptedException e){
+                System.out.println("실패");
+            }
+        }
     }
 }
 
